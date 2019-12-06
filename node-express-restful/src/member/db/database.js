@@ -9,12 +9,12 @@ import mysql from "mysql";
 //             debug    : false 
 //             });     
 const pool = mysql.createPool({
-            host: "192.168.27.186",
+            host: "localhost",
             user: "root",
             password: "root",
             database: "pbook",
             debug    : false 
-            });     
+            });    
                           
 
 function executeQuery(sql, callback) {
