@@ -204,7 +204,7 @@ class AddMemberBook extends React.Component {
               <div className="container" style={{ margin: '15px 0px 0px 0px' }}>
                 <div style={{ marginTop: '10px' }}>
                   <section className="d-flex">
-                    <section style={{ minWidth: '640px', margin: '0px 30px' }}>
+                    <section style={{ width: '30vw', margin: '0px 30px' }}>
                       <div className="form-group">
                         <label htmlFor="mb_isbn">ISBN</label>
                         <span
@@ -326,7 +326,7 @@ class AddMemberBook extends React.Component {
                         />
                       </div>
                     </section>
-                    <section style={{ minWidth: '640px', margin: '0px 30px' }}>
+                    <section style={{ maxWidth: '50vw', margin: '0px 30px' }}>
                       <div className="form-group">
                         <label htmlFor="mb_savingStatus">書況</label>
                         <span
@@ -370,13 +370,13 @@ class AddMemberBook extends React.Component {
                             withIcon={true}
                             buttonText="Choose images"
                             onChange={this.onDrop}
-                            style={{ width: '600px', height: '130px' }}
+                            style={{ width: '40vw', height: '130px' }}
                             imgExtension={['.jpg', '.gif', '.png', '.gif']}
                             maxFileSize={5242880}
                           />
                           <div style={{ height: '20px', marginTop: '10px' }}>
                             <span
-                              style={{ margin: '0px 20px' }}
+                              style={{ margin: '0px 10px' }}
                               className="my_text_blacktea_fifty"
                             >
                               最多上傳三張圖片
@@ -587,7 +587,7 @@ class AddMemberBook extends React.Component {
                           id="mb_remarks"
                           rows="5"
                           style={{
-                            width: '680px',
+                            width: '40vw',
                             height: '90px',
                             resize: 'none',
                           }}

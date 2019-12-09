@@ -7,6 +7,39 @@ $big_text: 32px;
 $title: 28px;
 $content: 24px;
 
+//RWD 樣式設定
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
+
+//電腦
+@mixin pc-width() {
+  @media all and (min-width: $pc-media) {
+               @content;
+         }
+    }
+//平板
+ @mixin pad-width() {
+@media all and (min-width:$pad-media) and (max-width: $pcs-media) {
+                @content;
+          }
+}
+//小平板
+ @mixin small-pad-width() {
+        @media all and (min-width: $phone-media) and (max-width:$pads-media) {
+                @content;
+          }
+ }
+//手機
+ @mixin phone-width() {
+        @media all and (max-width: $phones-media) {
+                @content;
+          }
+ }
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +49,11 @@ $content: 24px;
 .contentWrap {
   min-height: 80vw;
   width: 1280px;
+
+  @include pc-width{
+    max-width: 920px;
+  }
+  
 }
 
 .MB_title {
@@ -26,12 +64,21 @@ $content: 24px;
   padding-bottom: 50px;
   width: 1180px;
   border-bottom: 3px solid $yellow;
+
+  @include pc-width{
+    max-width: 920px;
+  }
 }
 .nobook{
   width: 100%;
   padding-left: 450px;
   font-size: $big_text;
   margin-top: 50px;
+
+  @include pc-width{
+    max-width: 920px;
+    padding-left: 200px;
+  }
 }
 
 .err_border {
@@ -53,6 +100,8 @@ $content: 24px;
 
 //FBMessage
 .fbMessage{
+    position: absolute;
+    right: 0;
     width: 50px;
     height: 50px;
     // background: rgb(86, 75, 97);
@@ -92,6 +141,9 @@ $content: 24px;
 .queryOrder {
   @extend .contentWrap;
   // border: 1px solid rgb(109, 34, 34);
+  @include pc-width{
+    max-width: 920px;
+  }
   .nobook{
     @extend .nobook;
   }
@@ -115,11 +167,11 @@ $content: 24px;
 
 //查看二手書書籍
 .viewMemberBooks {
-  position: absolute;
-  right: 0;
-  left: 320px;
-  height: 100%;
-  padding: 31px;
+  // position: absolute;
+  // right: 0;
+  // left: 320px;
+  // height: 100%;
+  // padding: 31px;
   // color: $yellow;
   // box-shadow: inset 0 20px 6rem #2d3a3a, inset 0 20px 6rem #2d3a3a;
   margin: 0;
@@ -184,16 +236,12 @@ $content: 24px;
 
 //收藏書評家
 .reviewerContent{
-  position: absolute;
-  // background: #f24;
-  right: 0;
-  left: 300px;
-  height: 100%;
-  padding: 31px;
+  width: 100vw;
   color: $yellow;
   box-shadow: inset 0 20px 6rem #2d3a3a, inset 0 20px 6rem #2d3a3a;
-  margin: 0;
   transition: 0.5s;
+
+  
 
   &::before {
     content: '';
@@ -205,9 +253,6 @@ $content: 24px;
     top: 0;
     bottom: 0;
     width: 100%;
-  }
-  .test1{
-    // background: #000;
   }
   .nobook{
     @extend .nobook;
@@ -239,8 +284,8 @@ $content: 24px;
   .reviewerList {
     /* background: #fff; */
     /* background: url(../reviewer_page/images/01_書評家.png) center center; */
-    max-width: 1200px;
-    margin: 10px 0px 0 30px;
+    // max-width: 1200px;
+    margin: 10px 20px 0 30px;
     // padding-bottom: 30px;
     background-size:cover;
   }
@@ -376,14 +421,9 @@ $content: 24px;
 
 //收藏書籍
 .booksContent {
-  position: absolute;
-  right: 0;
-  left: 300px;
   height: 100%;
-  padding: 31px;
   color: $yellow;
   box-shadow: inset 0 20px 6rem #2d3a3a, inset 0 20px 6rem #2d3a3a;
-  margin: 0;
   transition: 0.5s;
 
   &::before {
@@ -420,11 +460,16 @@ $content: 24px;
   }
   .list {
     padding-bottom: 10px;
-    margin: 25px 30px 15px 30px;
+    margin: 50px 30px 15px 40px;
     transition: 0.5s;
     min-width: 110px;
-    max-width: 200px;
-    height: 250px;
+    // max-width: 200px;
+    min-height: 150px;
+
+    @include pc-width{
+      max-width: 150px;
+
+    }
   }
 
   .listImg {
@@ -530,17 +575,21 @@ $content: 24px;
     margin-top: 50px;
     padding-left: 60px;
     padding-bottom: 50px;
-    width: 1400px;
+    // width: 100vw;
     border-bottom: 3px solid $yellow;
   }
   .button-group {
     // border: 1px solid #000;
-    margin: 30px 0px 100px 300px;
+    margin: 30px 0px 100px 150px;
     justify-content: flex-start;
     button {
       // border: 1px solid red;
       margin: 20px 100px;
     }
+  }
+
+  .container{
+    width: 80vw;
   }
 }
 
@@ -572,11 +621,26 @@ $content: 24px;
     .item {
       /* background-color: silver; */
       box-sizing: border-box;
+
+      input{
+
+      }
+          @include pc-width{
+            
+          }
     }
 
     h4 {
       margin: 20px;
       padding: 20px 10px;
+
+      @include pc-width{
+        display: block;
+        width: 80px;
+        margin: 10px;
+        padding: 20px 10px;
+      }
+  
     }
     input {
       // border: 1px solid #000;
@@ -723,7 +787,7 @@ $content: 24px;
 
 //sidebar內樣式
 .side-menu {
-  width: 305px;
+  min-width: 200px;
   min-height: 85vw;;
   padding: 30px 0;
   box-sizing: border-box;
@@ -733,11 +797,22 @@ $content: 24px;
   display: flex;
   flex-direction: column;
   // box-shadow: 5px 5px 10px #2D3A3A;
+
   text-decoration: none;
+  @include pc-width{
+    max-width: 200px;
+    padding: 20px 0;
+  }
 
   .sidebar {
-    padding-left: 60px;
+    padding: 0 60px;
+
+    @include pc-width{
+      padding: 0 15px;
+    }
+    
   }
+
 
   .sidebar_title {
     // border: 1px solid #000;
@@ -745,9 +820,21 @@ $content: 24px;
     color: $black;
     text-decoration: none;
 
+    @include pc-width{
+      font-size: 26px;
+      color: $black;
+      text-decoration: none !important;
+    }
+
     h2 {
       font-size: 28px;
       text-decoration: none !important;
+
+      @include pc-width{
+        font-size: 26px;
+        color: $black;
+        text-decoration: none !important;
+      }
     }
   }
 
@@ -755,9 +842,19 @@ $content: 24px;
     padding: 5px 50px;
     font-size: 24px;
 
+    @include pc-width{
+      padding: 5px 30px;
+    }
+    
+
     a {
       font-size: 24px;
       color: $black;
+
+      @include pc-width{
+        font-size: 18px;
+        text-decoration: none !important;
+      }
     }
     a:hover {
       color: $yellow;
@@ -765,6 +862,7 @@ $content: 24px;
     }
   }
 }
+
 
 //navbar樣式
 .navbarWrap {

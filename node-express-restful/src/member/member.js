@@ -4,20 +4,21 @@ import member from './domain/member'
 import login from './domain/login'
 const router = express.Router()
 const bluebird = require("bluebird");
+const Base64 = require('js-base64').Base64;
 bluebird.promisifyAll(db);
 
 var Member = new member()
 
 //註冊
 router.post('/register', (req, res, next) => {
-    const crypto = require('crypto')
-    let sha1 = crypto.createHash('sha1')
-    let hash = sha1.update(req.body.email).digest('hex')
+    // const crypto = require('crypto')
+    // let sha1 = crypto.createHash('sha1')
+    // let hash = sha1.update(req.body.email).digest('hex')
+    let hash = Base64.encode(req.body.email)
     // console.log(hash);
     
     let nickname = req.body.nickname
     // console.log(hash);
-    // return
     let Member = new member(req.body.name, req.body.email, req.body.password, req.body.filename)
     let number_blank = "MR00000"
     let new_number =""
@@ -319,6 +320,7 @@ router.post('/login', (req, res, next) => {
             })
             return
         }else{
+            
             //設定session
             // 在session內塞memberData物件，用來存放會員資料
             req.session.memberData = {

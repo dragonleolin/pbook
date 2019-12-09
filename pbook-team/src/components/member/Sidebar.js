@@ -31,11 +31,6 @@ const Sidebar = props => {
                     variant="link"
                     eventKey="0"
                     className="sidebar_title"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     <Link
                       to="/member"
@@ -63,11 +58,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     訂單管理
                   </Accordion.Toggle>
@@ -85,11 +75,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     個人書櫃
                   </Accordion.Toggle>
@@ -112,11 +97,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     二手書管理
                   </Accordion.Toggle>
@@ -139,11 +119,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     活動
                   </Accordion.Toggle>
@@ -162,11 +137,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     討論區管理
                   </Accordion.Toggle>
@@ -196,19 +166,9 @@ const Sidebar = props => {
                     variant="link"
                     eventKey="0"
                     className="sidebar_title"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '26px',
-                    }}
                   >
                     <Link
                       to="/member"
-                      style={{
-                        color: '#2D3A3A',
-                        textDecoration: 'none',
-                        fontSize: '28px',
-                      }}
                     >
                       <h2>會員資料</h2>
                     </Link>
@@ -232,11 +192,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     訂單管理
                   </Accordion.Toggle>
@@ -254,11 +209,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     個人書櫃
                   </Accordion.Toggle>
@@ -281,11 +231,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     二手書管理
                   </Accordion.Toggle>
@@ -308,11 +253,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     活動
                   </Accordion.Toggle>
@@ -331,11 +271,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     討論區管理
                   </Accordion.Toggle>
@@ -358,11 +293,6 @@ const Sidebar = props => {
                     as={Button}
                     variant="link"
                     eventKey="0"
-                    style={{
-                      color: '#2D3A3A',
-                      textDecoration: 'none',
-                      fontSize: '28px',
-                    }}
                   >
                     書評家專用
                   </Accordion.Toggle>

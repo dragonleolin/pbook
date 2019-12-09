@@ -62,25 +62,25 @@ app.use((req, res, next) => {
 });
 
 app.use("/member", require("./src/member/member"));
-// app.use("/forum", require("./src/forum/homepage"));
-// app.use("/books", require("./src/books/bookApi"));
+app.use("/forum", require("./src/forum/homepage"));
+app.use("/books", require("./src/books/bookApi"));
 
 
-// app.use("/nana_use", require("./src/nana_use/chat"));
-// app.use("/nana_use", require("./src/nana_use/game"));
-// app.use("/nana_use", require("./src/nana_use/index"));
+app.use("/nana_use", require("./src/nana_use/chat"));
+app.use("/nana_use", require("./src/nana_use/game"));
+app.use("/nana_use", require("./src/nana_use/index"));
 
 
-// app.use("/activities", require("./src/activities/acApi"));
+app.use("/activities", require("./src/activities/acApi"));
 
-// app.use("/reviews", require("./src/book_review/reviews"));
-// app.use("/reviews", require("./src/book_review/books"));
-// app.use("/reviews", require("./src/book_review/reply"));
+app.use("/reviews", require("./src/book_review/reviews"));
+app.use("/reviews", require("./src/book_review/books"));
+app.use("/reviews", require("./src/book_review/reply"));
 
-// app.use("/reviewer", require("./src/reviewer/brReviewerList"));
-// app.use("/reviewer", require("./src/reviewer/brBookcase"));
-// app.use("/reviewer", require("./src/reviewer/brBooks"));
-// app.use("/reviewer", require("./src/reviewer/brBlogEdit"));
+app.use("/reviewer", require("./src/reviewer/brReviewerList"));
+app.use("/reviewer", require("./src/reviewer/brBookcase"));
+app.use("/reviewer", require("./src/reviewer/brBooks"));
+app.use("/reviewer", require("./src/reviewer/brBlogEdit"));
 
 app.get("/", function(req, res) {
   res.json({

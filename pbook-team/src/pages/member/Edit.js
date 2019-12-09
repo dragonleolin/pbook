@@ -256,7 +256,7 @@ class Edit extends React.Component {
                     name="birthday"
                     value={this.state.birthday}
                     onChange={this.handleChange}
-                  />{' '}
+                  />
                 </div>
                 <div className="d-flex item">
                   <h4>手機 : </h4>

@@ -200,7 +200,7 @@ class PasswordModify extends React.Component{
                     </div>
 
                     <div className="d-flex justify-content-center" 
-                    style={{ width: '1280px',
+                    style={{ width: '920px',
                             padding: '50px',
                             }}>
                       <button
